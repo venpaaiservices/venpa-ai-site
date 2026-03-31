@@ -204,12 +204,11 @@ const Contact: React.FC = () => {
                     <optgroup label="Products">
                       <option>Booking Page URL</option>
                       <option>Data-Driven Optimization</option>
-<<<<<<< HEAD
-=======
+
                       <option>Metadata Extractor</option>
                       <option>Subject Line Generator</option>
                       <option>AI Automated Marketing Platform</option>
->>>>>>> f16fba24d8df3d999031ca3c002d8818451c3ccc
+
                       <option>Voice agent for booking appointments</option>
                     </optgroup>
                     <optgroup label="Services">
