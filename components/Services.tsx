@@ -38,28 +38,6 @@ const products: Service[] = [
     gradient: 'from-blue-600 to-indigo-600'
   },
   {
-    id: 'metadata-extractor',
-    title: 'Metadata Extractor',
-    description: 'Automated tools to extract and organize critical metadata from complex datasets and documents.',
-    icon: Search,
-    gradient: 'from-purple-600 to-blue-600'
-  },
-  {
-    id: 'subject-line-gen',
-    title: 'Subject Line Generator',
-    description: 'AI-powered engine to generate high-converting email subject lines tailored to your audience.',
-    icon: Terminal,
-    gradient: 'from-orange-400 to-red-500'
-  },
-  {
-    id: 'ai-marketing-platform',
-    title: 'AI Automated Marketing Platform',
-    description: 'A comprehensive AI-driven platform to automate and optimize your marketing workflows and customer engagement.',
-    icon: Cpu,
-    gradient: 'from-fuchsia-600 to-purple-700'
-  },
-  {
-
     id: 'voice-agent',
     title: 'Voice agent for booking appointments',
     description: 'AI-powered voice agents that handle appointment scheduling and customer inquiries over the phone.',
