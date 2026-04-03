@@ -24,12 +24,12 @@ const Founder: React.FC = () => {
                     <Quote className="h-16 w-16 text-blue-600 dark:text-blue-400 opacity-20 mb-8 mx-auto" />
                     
                     <blockquote className="text-2xl md:text-4xl font-medium text-slate-900 dark:text-slate-100 leading-relaxed mb-10 font-sans">
-                        "At Venpa AI, we believe technology should be poetic in its elegance and powerful in its execution. We don't just write code; we architect the future for businesses ready to scale."
+                        "True engineering elegance isn't just found in the code—it's in the massive business bottlenecks you eliminate. We built Venpa AI to cut through the bloat of traditional IT and bridge the gap between complex legacy infrastructure and the transformative power of secure, private AI."
                     </blockquote>
 
                     <div className="mb-10">
                         <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Vanishree Venugopal</h3>
-                        <p className="text-blue-600 dark:text-blue-400 font-medium text-lg mt-1">Founder & CEO </p>
+                        <p className="text-blue-600 dark:text-blue-400 font-medium text-lg mt-1">Founder & CEO, Venpa AI</p>
                     </div>
                     
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
