@@ -18,7 +18,7 @@ const Process: React.FC = () => {
     { 
       id: '03', 
       title: 'Deployment', 
-      desc: 'Seamless integration into your ecosystem with Clover or Cloud support.',
+      desc: 'Seamless integration into your private VPC, AWS, or modern cloud ecosystem.',
       icon: Rocket
     },
     { 
