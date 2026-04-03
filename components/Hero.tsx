@@ -83,8 +83,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="max-w-2xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-10"
         >
-          From full-stack development to cutting-edge AI agents along with ROI Strategies. 
-          Venpa AI engineers the future of your business with data-driven ROI growth strategies.
+          From intelligent cloud architectures to autonomous AI agents, Venpa AI engineers secure, scalable infrastructure that accelerates enterprise velocity.
         </motion.p>
 
         {/* CTAs - UPDATED WITH ONCLICK HANDLERS */}
