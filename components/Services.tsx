@@ -5,16 +5,11 @@ import {
   Brain, 
   Layers, 
   Server, 
-  BarChart3, 
-  Terminal,
   Cpu,
-  ShoppingBag,
   GraduationCap,
   Sparkles,
-  Calendar,
   CreditCard,
   Search,
-  ShieldCheck,
   Package,
   Settings,
   Phone
@@ -24,47 +19,40 @@ import { Service } from '../types';
 
 const products: Service[] = [
   {
-    id: 'booking-url',
-    title: 'Booking Page URL',
-    description: 'Implementation of custom Booking page URLs for existing or new businesses, enabling seamless appointment scheduling.',
-    icon: Calendar,
-    gradient: 'from-cyan-500 to-blue-500'
-  },
-  {
     id: 'optimization-product',
-    title: 'Data-Driven Optimization',
+    title: 'Data-Driven Optimizer',
     description: 'Advanced Optimization & Personalization engines driven by data to significantly increase your ROI.',
     icon: Sparkles,
     gradient: 'from-blue-600 to-indigo-600'
   },
   {
     id: 'voice-agent',
-    title: 'Voice agent for booking appointments',
-    description: 'AI-powered voice agents that handle appointment scheduling and customer inquiries over the phone.',
+    title: 'Autonomous Inbound SDR & Voice Triage',
+    description: 'Deploy conversational AI voice agents that instantly respond to inbound enterprise leads, execute complex qualification frameworks, and intelligently route high-value prospects to your sales team\'s calendars.',
     icon: Phone,
     gradient: 'from-blue-400 to-cyan-600'
+  },
+  {
+    id: 'ai-gap-analysis',
+    title: 'Enterprise AI Gap Analysis Engine',
+    description: 'A comprehensive AI-driven audit of your entire technical stack. We identify integration drop-offs, security vulnerabilities, and deployment bottlenecks, delivering an actionable modernization roadmap.',
+    icon: Search,
+    gradient: 'from-orange-500 to-red-600'
   }
 ];
 
 const services: Service[] = [
   {
     id: 'mobile-web',
-    title: 'Mobile & Web Apps',
-    description: 'High-performance React Native and PWA solutions tailored for scale.',
+    title: 'Legacy Architecture Modernization',
+    description: 'We use advanced AI tooling to map and migrate expensive, outdated monolithic codebases into modern, scalable, decoupled microservices.',
     icon: Smartphone,
     gradient: 'from-blue-500 to-cyan-500'
   },
   {
-    id: 'clover',
-    title: 'Clover App Dev',
-    description: 'Custom POS applications to streamline retail and payment operations.',
-    icon: ShoppingBag,
-    gradient: 'from-green-500 to-emerald-500'
-  },
-  {
     id: 'llms',
-    title: 'LLMs & AI Agents',
-    description: 'Fine-tuning Large Language Models and building autonomous agents.',
+    title: 'Secure Enterprise AI (Private Cloud)',
+    description: 'We deploy isolated, robust LLM knowledge engines directly into your private AWS/VPC. Zero data leakage. 100% proprietary control for your engineering and operations teams.',
     icon: Brain,
     gradient: 'from-purple-500 to-pink-500'
   },
@@ -84,24 +72,10 @@ const services: Service[] = [
   },
   {
     id: 'infra',
-    title: 'Infrastructure Mgmt',
-    description: 'Cloud-native DevOps, CI/CD, and scalable server architecture.',
+    title: 'Intelligent Cloud & DevOps Audits',
+    description: 'Stop bleeding money on inefficient cloud architectures. We implement AI-driven auditing for CI/CD pipelines to predict build failures, slash cloud waste, and accelerate deployment velocity.',
     icon: Server,
     gradient: 'from-slate-500 to-slate-700'
-  },
-  {
-    id: 'roi',
-    title: 'ROI Strategies',
-    description: 'Data-backed growth hacking to maximize return on tech investment.',
-    icon: BarChart3,
-    gradient: 'from-teal-500 to-green-500'
-  },
-  {
-    id: 'fullstack',
-    title: 'Full-Stack Dev',
-    description: 'End-to-end solutions using modern stacks (MERN, Next.js, Python).',
-    icon: Terminal,
-    gradient: 'from-fuchsia-500 to-purple-500'
   },
   {
     id: 'training',
@@ -112,15 +86,15 @@ const services: Service[] = [
   },
   {
     id: 'corporate-training',
-    title: 'Corporate Training',
-    description: 'Upskilling teams in modern tech stacks, AI, and cloud technologies.',
+    title: 'Custom RAG Pipelines',
+    description: 'Building proprietary knowledge engines with Retrieval-Augmented Generation for secure, context-aware AI.',
     icon: GraduationCap,
     gradient: 'from-pink-500 to-rose-500'
   },
   {
     id: 'payment-gateway',
-    title: 'Payment Gateway Integration',
-    description: 'Secure and seamless integration of payment gateways for global transactions.',
+    title: 'API Orchestration',
+    description: 'Seamlessly connecting and managing complex API ecosystems for enterprise-grade interoperability.',
     icon: CreditCard,
     gradient: 'from-slate-700 to-slate-900'
   }
@@ -142,7 +116,7 @@ const Services: React.FC = () => {
         >
           <h2 className="text-sm font-bold text-blue-600 tracking-widest uppercase mb-3">Our Offerings</h2>
           <p className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
-            Future-Ready IT Solutions
+            Accelerating Engineering Velocity with Autonomous AI & Scalable Systems
           </p>
           <p className="max-w-2xl text-xl text-slate-500 dark:text-slate-400 mx-auto leading-relaxed">
             We provide a holistic suite of premium products and services to transform your business infrastructure and intelligence.
