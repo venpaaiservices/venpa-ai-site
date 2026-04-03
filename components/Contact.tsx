@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
               <span className="text-blue-600">Future Together</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-lg">
-              Whether you need a custom Clover app, a complex data pipeline, or an AI strategy, Venpa AI is ready to deliver excellence.
+              Whether you need a secure private cloud deployment, a complex data pipeline, or an autonomous AI strategy, Venpa AI is ready to deliver excellence.
             </p>
             
             <div className="space-y-8">
@@ -202,20 +202,18 @@ const Contact: React.FC = () => {
                   >
                     <option disabled value="">Select an option</option>
                     <optgroup label="Products">
-                      <option>Booking Page URL</option>
-                      <option>Data-Driven Optimization</option>
-                      <option>Voice agent for booking appointments</option>
+                      <option>Data-Driven Optimizer</option>
+                      <option>Autonomous Inbound SDR & Voice Triage</option>
+                      <option>Enterprise AI Gap Analysis Engine</option>
                     </optgroup>
                     <optgroup label="Services">
-                      <option>Mobile/Web App Development</option>
-                      <option>LLMs & AI Agents</option>
-                      <option>Clover Integration</option>
+                      <option>Legacy Architecture Modernization</option>
+                      <option>Secure Enterprise AI (Private Cloud)</option>
                       <option>Data Engineering & Training</option>
-                      <option>Payment Gateway Integration</option>
-                      <option>Corporate Training</option>
-                      <option>ROI & Growth Strategy</option>
+                      <option>API Orchestration</option>
+                      <option>Custom RAG Pipelines</option>
                       <option>Product Management</option>
-                      <option>Infrastructure Management</option>
+                      <option>Intelligent Cloud & DevOps Audits</option>
                     </optgroup>
                     <option>General Inquiry</option>
                   </select>
