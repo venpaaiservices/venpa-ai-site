@@ -205,6 +205,8 @@ const Contact: React.FC = () => {
                       <option>Data-Driven Optimizer</option>
                       <option>Autonomous Inbound SDR & Voice Triage</option>
                       <option>Enterprise AI Gap Analysis Engine</option>
+                      <option>Enterprise-Grade "Private" AI Gateways</option>
+                      <option>Autonomous Enterprise Agents</option>
                     </optgroup>
                     <optgroup label="Services">
                       <option>Legacy Architecture Modernization</option>
