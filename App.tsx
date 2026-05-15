@@ -4,8 +4,6 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Process from './components/Process';
 import Founder from './components/Founder';
-import AIDemo from './components/AIDemo';
-
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Careers from './components/Careers';
@@ -13,21 +11,24 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Scene3D from './components/three/Scene3D';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check if it's stored in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    // If not, check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
   const [currentPage, setCurrentPage] = useState<'home' | 'careers'>('home');
-
-  useEffect(() => {
-    const isDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    setDarkMode(isDark);
-  }, []);
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
+      localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
@@ -52,8 +53,6 @@ function App() {
                 <Hero />
                 <Services />
                 <Process />
-
-                <AIDemo />
                 <Founder />
                 <Contact />
               </>
