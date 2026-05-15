@@ -8,7 +8,7 @@ import {
   Cpu,
   GraduationCap,
   Sparkles,
-<<<<<<< HEAD
+
   Briefcase,
   Phone,
   Bot,
@@ -16,7 +16,7 @@ import {
   BarChart3,
   Package,
   Settings
-=======
+
   CreditCard,
   Search,
   Package,
@@ -25,7 +25,6 @@ import {
   Bot,
   Zap,
   Globe
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Service } from '../types';
@@ -33,7 +32,7 @@ import AuditFormModal from './AuditFormModal';
 
 const products: Service[] = [
   {
-<<<<<<< HEAD
+
     id: 'agentic-ai',
     title: 'Agentic AI Systems',
     description: 'Autonomous AI agents that execute workflows, reasoning, and multi-step automation without human intervention.',
@@ -52,7 +51,6 @@ const products: Service[] = [
     title: 'Voice AI Solutions',
     description: 'Human-like multilingual AI voice agents that handle qualification and routing at enterprise scale.',
     icon: Phone,
-=======
     id: 'optimization-product',
     title: 'Data-Driven Optimization Engine',
     description: 'Bespoke optimization & personalization engines built on proprietary data to maximize B2B revenue and user LTV.',
@@ -78,18 +76,17 @@ const products: Service[] = [
     title: 'Multi-Agent Orchestrators',
     description: 'Sophisticated AI ecosystems autonomously handling complex workflows from supply chain to internal knowledge retrieval.',
     icon: Bot,
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+
     gradient: 'from-emerald-500 to-teal-600'
   }
 ];
 
 const services: Service[] = [
   {
-<<<<<<< HEAD
+
     id: '3d-websites',
     title: 'Next-Gen Web / 3D Experiences',
     description: 'Immersive, high-performance 3D web experiences that redefine your digital presence and engage users.',
-=======
     id: 'workflow-automation',
     title: 'Automate your workflows',
     description: 'Smarter Workflows & Better Outcomes through autonomous AI agent orchestration and intelligent process intelligence.',
@@ -100,12 +97,12 @@ const services: Service[] = [
     id: '3d-websites',
     title: 'Next-Gen Web Development / 3D Experiences',
     description: 'Immersive, high-performance 3D web experiences that captivate your audience and redefine your digital presence.',
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+
     icon: Globe,
     gradient: 'from-blue-600 to-cyan-500'
   },
   {
-<<<<<<< HEAD
+
     id: 'product-management',
     title: 'AI Product Management',
     description: 'Bridging the gap between technical AI potential and market-winning user experiences through strategic roadmap development.',
@@ -130,7 +127,7 @@ const services: Service[] = [
     id: 'modernization',
     title: 'Architectural Modernization',
     description: 'Migrating legacy codebases into scalable, AI-ready microservices using advanced automated refactoring.',
-=======
+
     id: 'mobile-web',
     title: 'Architectural Modernization',
     description: 'Migrating legacy monolithic codebases into scalable, AI-ready microservices using advanced automated refactoring.',
@@ -155,18 +152,18 @@ const services: Service[] = [
     id: 'product-mgmt',
     title: 'Strategic AI Roadmap',
     description: 'Agile product management focusing on high-impact AI integration and measurable business outcomes.',
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+
     icon: Layers,
     gradient: 'from-indigo-500 to-blue-500'
   },
   {
-<<<<<<< HEAD
+
     id: 'corporate-training',
     title: 'Corporate AI Training',
     description: 'Empowering your workforce with the tools and mindsets needed to handle, deploy, and scale AI systems effectively.',
     icon: GraduationCap,
     gradient: 'from-yellow-400 to-orange-600'
-=======
+
     id: 'infra',
     title: 'Cloud Velocity Audit',
     description: 'Implementation of AI-driven auditing to predict failures and slash cloud waste by up to 40%.',
@@ -193,7 +190,7 @@ const services: Service[] = [
     description: 'Intelligent AI-driven connectivity for complex B2B ecosystems and cross-platform interoperability.',
     icon: CreditCard,
     gradient: 'from-slate-700 to-slate-900'
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+
   }
 ];
 
@@ -353,8 +350,8 @@ const Services: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
+
 export default Services;
-=======
+
 export default Services;
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+

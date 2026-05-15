@@ -82,7 +82,6 @@ service cloud.firestore {
     }
 
     function isValidInquiry(data) {
-<<<<<<< HEAD
       let requiredFields = ['name', 'email', 'interest', 'message', 'createdAt', 'status'];
       let allAllowedFields = ['name', 'email', 'interest', 'message', 'createdAt', 'status', 'date', 'time'];
       
@@ -96,7 +95,7 @@ service cloud.firestore {
              (!('time' in data) || (data.time is string && data.time.size() <= 100)) &&
              (data.createdAt == request.time || data.createdAt is timestamp) &&
              data.status == 'new';
-=======
+
       let fields = ['name', 'email', 'interest', 'message', 'createdAt', 'status'];
       return data.keys().hasAll(fields) &&
              fields.hasAll(data.keys()) &&
@@ -106,14 +105,13 @@ service cloud.firestore {
              data.message is string && data.message.size() >= 1 && data.message.size() <= 2000 &&
              data.createdAt is timestamp &&
              data.status is string;
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+
     }
 
     function isValidAuditRequest(data) {
       let requiredFields = ['fullName', 'workEmail', 'companyWebsite', 'objective', 'createdAt', 'status'];
       
       return data.keys().hasAll(requiredFields) &&
-<<<<<<< HEAD
              data.keys().size() <= 7 &&
              data.fullName is string && data.fullName.size() > 0 && data.fullName.size() <= 200 &&
              isValidEmail(data.workEmail) &&
@@ -121,14 +119,13 @@ service cloud.firestore {
              data.objective is string && data.objective.size() > 0 &&
              (!('bottleneck' in data) || (data.bottleneck is string && data.bottleneck.size() <= 5000)) &&
              (data.createdAt == request.time || data.createdAt is timestamp) &&
-=======
              data.fullName is string && data.fullName.size() >= 1 && data.fullName.size() <= 200 &&
              isValidEmail(data.workEmail) &&
              data.companyWebsite is string && data.companyWebsite.size() >= 3 &&
              data.objective is string &&
              (!('bottleneck' in data) || (data.bottleneck is string && data.bottleneck.size() <= 5000)) &&
              data.createdAt is timestamp &&
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
+
              data.status == 'pending';
     }
 
