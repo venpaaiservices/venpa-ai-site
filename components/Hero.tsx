@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const Hero: React.FC = () => {
   const [textIndex, setTextIndex] = useState(0);
-  const words = ["Orchestrate.", "Scale.", "Transform.", "Empower."];
+  const words = ["Automate.", "Empower.", "Orchestrate."];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTextIndex((prev) => (prev + 1) % words.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
 
   // FIX: This function handles the smooth scrolling without breaking the page
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -73,34 +73,24 @@ const Hero: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-<<<<<<< HEAD
           className="text-5xl md:text-8xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]"
-        >
-          Building Intelligence
-          <br className="hidden md:block" />
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent italic">
-            for the Future
-          </span>
-=======
-          className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-8 leading-tight"
         >
           Innovate. Build.
           <br className="hidden md:block" />
-          <div className="relative h-[1.2em] overflow-hidden inline-flex items-center justify-center min-w-[320px] md:min-w-[500px] px-8">
+          <div className="h-[1.1em] relative flex justify-center overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.span
-                key={textIndex}
+                key={words[textIndex]}
                 initial={{ y: 40, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -40, opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap"
+                className="absolute bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent italic"
               >
                 {words[textIndex]}
               </motion.span>
             </AnimatePresence>
           </div>
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
         </motion.h1>
 
         {/* Subhead */}
@@ -109,36 +99,22 @@ const Hero: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
           className="max-w-4xl mx-auto text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-12 font-medium leading-relaxed"
         >
           We engineer the intelligent operating layer for modern enterprises, transforming standard automation into autonomous intelligence.
         </motion.p>
 
         {/* CTAs */}
-=======
-          className="max-w-4xl mx-auto text-xl text-slate-700 dark:text-slate-300 mb-10 font-bold"
-        >
-          We Accelerate Enterprise Velocity & Drive Tangible ROI Through Secure, Autonomous AI Agents.
-        </motion.p>
-
-        {/* CTAs - UPDATED WITH TIERED STRATEGY */}
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-<<<<<<< HEAD
           className="flex flex-col sm:flex-row justify-center gap-6"
-=======
-          className="flex flex-col sm:flex-row justify-center gap-4"
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
         >
           <a
             href="#contact"
             onClick={(e) => handleScrollTo(e, 'contact')}
-<<<<<<< HEAD
             className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/40 hover:scale-105 cursor-pointer"
           >
             Book AI Strategy Call <ArrowRight className="ml-2 h-6 w-6" />
@@ -151,20 +127,6 @@ const Hero: React.FC = () => {
             className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-all hover:scale-105 cursor-pointer backdrop-blur-xl"
           >
             Explore AI Solutions
-=======
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:scale-105 cursor-pointer"
-          >
-            Get Started <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
-          <button
-            onClick={() => {
-              const element = document.getElementById('readiness-magnet');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-50 dark:hover:bg-slate-700 transition-all hover:scale-105 cursor-pointer"
-          >
-            Take AI Readiness Test
->>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
           </button>
         </motion.div>
 
