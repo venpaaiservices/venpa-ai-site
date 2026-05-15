@@ -13,8 +13,11 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     interest: 'General Inquiry',
+<<<<<<< HEAD
     date: '',
     time: '',
+=======
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
     message: ''
   });
 
@@ -34,6 +37,7 @@ const Contact: React.FC = () => {
       newErrors.message = 'Message must be at least 10 characters long';
     }
 
+<<<<<<< HEAD
     // Date/Time validation
     if (formData.date) {
       const { dateString: todayString, currentMinutes } = getISTDetails();
@@ -51,6 +55,8 @@ const Contact: React.FC = () => {
       }
     }
 
+=======
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
     if (Object.keys(newErrors).length > 0) {
       console.log("Contact validation failed:", newErrors);
     }
@@ -58,6 +64,7 @@ const Contact: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+<<<<<<< HEAD
   const getISTDetails = () => {
     const now = new Date();
     const dateString = new Intl.DateTimeFormat('en-CA', {
@@ -82,6 +89,8 @@ const Contact: React.FC = () => {
     return getISTDetails().dateString;
   };
 
+=======
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
     setFormData({
@@ -117,8 +126,11 @@ const Contact: React.FC = () => {
           name: formData.name.trim(),
           email: formData.email.trim(),
           interest: formData.interest,
+<<<<<<< HEAD
           date: formData.date,
           time: formData.time,
+=======
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
           message: formData.message.trim(),
           createdAt: serverTimestamp(),
           status: 'new'
@@ -133,7 +145,11 @@ const Contact: React.FC = () => {
 
       console.log("Inquiry submitted successfully!");
       setFormState('success');
+<<<<<<< HEAD
       setFormData({ name: '', email: '', interest: 'General Inquiry', date: '', time: '', message: '' });
+=======
+      setFormData({ name: '', email: '', interest: 'General Inquiry', message: '' });
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
 
     } catch (error) {
       console.error("Error submitting form: ", error);
@@ -258,6 +274,7 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all dark:text-white"
                   >
                     <option disabled value="">Select an option</option>
+<<<<<<< HEAD
                     <optgroup label="Direct Services">
                       <option>Enterprise AI Readiness Audit</option>
                       <option>AI Strategy Consultation</option>
@@ -274,11 +291,33 @@ const Contact: React.FC = () => {
                     <optgroup label="Specialized">
                       <option>Next-Gen Web / 3D Experiences</option>
                       <option>Architectural Modernization</option>
+=======
+                    <optgroup label="Direct Conversions">
+                      <option>Enterprise AI Readiness Audit</option>
+                    </optgroup>
+                    <optgroup label="Products">
+                      <option>Data-Driven Optimization Engine</option>
+                      <option>Agentic Voice Triage</option>
+                      <option>Enterprise AI Stack Audit</option>
+                      <option>Multi-Agent Orchestrators</option>
+                    </optgroup>
+                    <optgroup label="Services">
+                      <option>Automate your workflows</option>
+                      <option>Next-Gen Web Development / 3D Experiences</option>
+                      <option>Legacy Architecture Modernization</option>
+                      <option>Secure Enterprise AI (Private Cloud)</option>
+                      <option>Data Engineering & Training</option>
+                      <option>API Orchestration</option>
+                      <option>Custom RAG Pipelines</option>
+                      <option>Product Management</option>
+                      <option>Intelligent Cloud & DevOps Audits</option>
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
                     </optgroup>
                     <option>General Inquiry</option>
                   </select>
                 </div>
 
+<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="date" className="text-sm font-semibold text-slate-700 dark:text-slate-300">Preferred Date</label>
@@ -305,6 +344,8 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
+=======
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-semibold text-slate-700 dark:text-slate-300">Message</label>
                   <textarea 
@@ -344,4 +385,8 @@ const Contact: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Contact;
+=======
+export default Contact;
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c

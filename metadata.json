@@ -1,5 +1,10 @@
 {
   "name": "Venpa AI",
+<<<<<<< HEAD
   "description": "Venpa AI - Building the Intelligent Operating Layer for Future Businesses through Agentic AI and Enterprise RAG Systems.",
   "requestFramePermissions": ["camera"]
+=======
+  "description": "Premium IT Services and AI Solutions Startup Website",
+  "requestFramePermissions": []
+>>>>>>> a004ee3e75b3ed3fe07ff19cab6ed50b5c25da6c
 }

@@ -1,5 +1,8 @@
 import React from 'react';
+
 import { Linkedin, Quote } from 'lucide-react';
+
+import { Linkedin, Quote, Award } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const Founder: React.FC = () => {
@@ -26,12 +29,16 @@ const Founder: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-slate-100 dark:border-slate-800 relative overflow-hidden"
-            >
+
+                className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-16 shadow-2xl border border-slate-100 dark:border-slate-800 relative overflow-hidden text-center"
+            
                 {/* Background Blobs */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 dark:bg-blue-900/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -mr-20 -mt-20"></div>
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-100 dark:bg-purple-900/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -ml-20 -mb-20"></div>
 
                 <div className="relative z-10 max-w-4xl mx-auto text-center">
+                <div className="relative z-10 max-w-4xl mx-auto">
+
                     
                     <motion.div
                         initial={{ rotate: -10, scale: 0.8, opacity: 0 }}
@@ -42,8 +49,12 @@ const Founder: React.FC = () => {
                         <Quote className="h-16 w-16 text-blue-600 dark:text-blue-400 opacity-20 mb-8 mx-auto" />
                     </motion.div>
                     
+
                     <blockquote className="text-2xl md:text-3xl font-medium text-slate-900 dark:text-slate-100 leading-relaxed mb-10 font-sans italic">
                         "AI is no longer optional. The businesses that adopt intelligent systems today will lead tomorrow. We built Venpa AI to cut through the noise and deliver high-performance, private AI systems that actually drive bottom-line growth."
+
+                    <blockquote className="text-2xl md:text-4xl font-medium text-slate-900 dark:text-slate-100 leading-relaxed mb-10 font-sans">
+                        "True engineering elegance isn't just found in the code—it's in the massive business bottlenecks you eliminate. We built Venpa AI to cut through the bloat of traditional IT and bridge the gap between complex legacy infrastructure and the transformative power of secure, private AI."
                     </blockquote>
 
                     <motion.div 
@@ -71,6 +82,18 @@ const Founder: React.FC = () => {
                             <Linkedin size={20} />
                             Connect on LinkedIn
                         </motion.a>
+
+                        
+                        <motion.div 
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.6 }}
+                            className="flex items-center gap-3 px-6 py-3 bg-slate-50 dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700"
+                        >
+                            <Award className="text-yellow-500" size={24} />
+                            <span className="font-semibold text-slate-700 dark:text-slate-300">Industry Leader</span>
+                        </motion.div>
                     </div>
                 </div>
             </motion.div>

@@ -5,6 +5,7 @@ import Services from './components/Services';
 import Process from './components/Process';
 import Founder from './components/Founder';
 import AIDemo from './components/AIDemo';
+
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Careers from './components/Careers';
@@ -51,6 +52,7 @@ function App() {
                 <Hero />
                 <Services />
                 <Process />
+
                 <AIDemo />
                 <Founder />
                 <Contact />
