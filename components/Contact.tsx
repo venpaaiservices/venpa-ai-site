@@ -15,7 +15,6 @@ const Contact: React.FC = () => {
     interest: 'General Inquiry',
     date: '',
     time: '',
-
     message: ''
   });
 
@@ -52,14 +51,12 @@ const Contact: React.FC = () => {
       }
     }
 
-
     if (Object.keys(newErrors).length > 0) {
       console.log("Contact validation failed:", newErrors);
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
 
   const getISTDetails = () => {
     const now = new Date();
@@ -84,7 +81,6 @@ const Contact: React.FC = () => {
   const getTodayString = () => {
     return getISTDetails().dateString;
   };
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -121,10 +117,8 @@ const Contact: React.FC = () => {
           name: formData.name.trim(),
           email: formData.email.trim(),
           interest: formData.interest,
-
           date: formData.date,
           time: formData.time,
-
           message: formData.message.trim(),
           createdAt: serverTimestamp(),
           status: 'new'
@@ -139,10 +133,7 @@ const Contact: React.FC = () => {
 
       console.log("Inquiry submitted successfully!");
       setFormState('success');
-
       setFormData({ name: '', email: '', interest: 'General Inquiry', date: '', time: '', message: '' });
-
-      setFormData({ name: '', email: '', interest: 'General Inquiry', message: '' });
 
     } catch (error) {
       console.error("Error submitting form: ", error);
@@ -283,30 +274,10 @@ const Contact: React.FC = () => {
                     <optgroup label="Specialized">
                       <option>Next-Gen Web / 3D Experiences</option>
                       <option>Architectural Modernization</option>
-                    <optgroup label="Direct Conversions">
-                      <option>Enterprise AI Readiness Audit</option>
-                    </optgroup>
-                    <optgroup label="Products">
-                      <option>Data-Driven Optimization Engine</option>
-                      <option>Agentic Voice Triage</option>
-                      <option>Enterprise AI Stack Audit</option>
-                      <option>Multi-Agent Orchestrators</option>
-                    </optgroup>
-                    <optgroup label="Services">
-                      <option>Automate your workflows</option>
-                      <option>Next-Gen Web Development / 3D Experiences</option>
-                      <option>Legacy Architecture Modernization</option>
-                      <option>Secure Enterprise AI (Private Cloud)</option>
-                      <option>Data Engineering & Training</option>
-                      <option>API Orchestration</option>
-                      <option>Custom RAG Pipelines</option>
-                      <option>Product Management</option>
-                      <option>Intelligent Cloud & DevOps Audits</option>
                     </optgroup>
                     <option>General Inquiry</option>
                   </select>
                 </div>
-
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -333,7 +304,6 @@ const Contact: React.FC = () => {
                     {errors.time && <p className="text-xs text-red-500 mt-1">{errors.time}</p>}
                   </div>
                 </div>
-
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-semibold text-slate-700 dark:text-slate-300">Message</label>
@@ -373,8 +343,5 @@ const Contact: React.FC = () => {
     </section>
   );
 };
-
-
-export default Contact;
 
 export default Contact;
