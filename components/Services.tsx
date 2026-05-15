@@ -13,7 +13,9 @@ import {
   Package,
   Settings,
   Phone,
-  Bot
+  Bot,
+  Zap,
+  Globe
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Service } from '../types';
@@ -51,6 +53,20 @@ const products: Service[] = [
 ];
 
 const services: Service[] = [
+  {
+    id: 'workflow-automation',
+    title: 'Automate your workflows',
+    description: 'Smarter Workflows & Better Outcomes through autonomous AI agent orchestration and intelligent process intelligence.',
+    icon: Zap,
+    gradient: 'from-blue-600 to-purple-600'
+  },
+  {
+    id: '3d-websites',
+    title: 'Next-Gen Web Development / 3D Experiences',
+    description: 'Immersive, high-performance 3D web experiences that captivate your audience and redefine your digital presence.',
+    icon: Globe,
+    gradient: 'from-blue-600 to-cyan-500'
+  },
   {
     id: 'mobile-web',
     title: 'Architectural Modernization',
