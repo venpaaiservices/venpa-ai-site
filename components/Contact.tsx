@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-slate-200 dark:border-slate-800'} focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all dark:text-white`}
-                      placeholder="abc@company.com"
+                      placeholder="john@company.com"
                     />
                     {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
                   </div>
