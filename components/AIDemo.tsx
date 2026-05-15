@@ -1,22 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Bot, 
-  Send, 
-  Terminal, 
   Cpu, 
   Database, 
-  Zap, 
-  MessageSquare,
-  Sparkles,
-  BarChart3,
-  Globe,
-  Loader2,
-  Camera,
+  BarChart3, 
+  Globe, 
+  Camera, 
   CameraOff
 } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
-import Markdown from 'react-markdown';
 import { Hands, Results } from '@mediapipe/hands';
 import { Camera as MPCamera } from '@mediapipe/camera_utils';
 
@@ -262,215 +253,16 @@ const NeuralInterface: React.FC = () => {
 };
 
 const AIDemo: React.FC = () => {
-  const [messages, setMessages] = useState<{ role: 'user' | 'ai', content: string }[]>([
-    { role: 'ai', content: "Hello! I'm the Venpa AI Strategic Assistant. How can I help you visualize your enterprise's AI transformation today?" }
-  ]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [messages]);
-
-  const handleSendMessage = async () => {
-    if (!input.trim() || isLoading) return;
-
-    const userMessage = input.trim();
-    setInput('');
-    setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
-    setIsLoading(true);
-
-    try {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
-      const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
-        contents: [
-            ...messages.map(m => ({ role: m.role === 'user' ? 'user' : 'model', parts: [{ text: m.content }] })),
-            { role: 'user', parts: [{ text: userMessage }] }
-        ],
-        config: {
-          systemInstruction: "You are Venpa AI's Lead Engineering Assistant. You help enterprise clients understand how Agentic AI, RAG, and Workflow Automation can transform their business. Be technical, direct, and visionary. Keep responses relatively concise but high-impact.",
-        }
-      });
-
-      const aiText = response.text || "I apologize, but I encountered an issue processing that request. How else can Venpa AI assist you?";
-      setMessages(prev => [...prev, { role: 'ai', content: aiText }]);
-    } catch (error) {
-      console.error("Gemini Error:", error);
-      setMessages(prev => [...prev, { role: 'ai', content: "Our neural networks are currently optimizing. Please try again in a moment for a strategic consultation." }]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const demoFeatures = [
-    { icon: Bot, title: "Autonomous Reasoners", desc: "Multi-step decision making agents." },
-    { icon: Database, title: "Private RAG", desc: "Secure knowledge retrieval pipelines." },
-    { icon: Zap, title: "Process Intel", desc: "Automated workflow orchestration." }
-  ];
-
   return (
     <section id="ai-demo" className="py-24 bg-slate-50 dark:bg-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          {/* Left Side: Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold mb-6">
-              <Sparkles className="h-4 w-4" />
-              <span>Interactive Strategic Demo</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold font-display text-slate-900 dark:text-white mb-6 leading-tight">
-              Experience the Future of <br />
-              <span className="text-blue-600">Enterprise Intelligence</span>
-            </h2>
-            
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-xl">
-              Don't just read about AI—interact with it. Our strategic assistant provides a window into how we engineer autonomous systems that solve complex business bottlenecks.
-            </p>
-
-            <div className="space-y-6">
-              {demoFeatures.map((feature, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + idx * 0.1 }}
-                  className="flex items-start space-x-4 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm"
-                >
-                  <div className="mt-1 p-2 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400">
-                    <feature.icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white">{feature.title}</h3>
-                    <p className="text-sm text-slate-500 dark:text-slate-500">{feature.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Right Side: Interactive Chat Terminal */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            {/* Background Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 blur-3xl rounded-[2.5rem] -z-10" />
-            
-            <div className="bg-slate-950 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden flex flex-col h-[600px]">
-              {/* Terminal Header */}
-              <div className="bg-slate-900/80 border-b border-slate-800 px-6 py-4 flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="flex space-x-1.5">
-                    <div className="h-3 w-3 rounded-full bg-red-500/80" />
-                    <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
-                    <div className="h-3 w-3 rounded-full bg-green-500/80" />
-                  </div>
-                  <div className="h-4 w-[1px] bg-slate-700 mx-2" />
-                  <div className="flex items-center space-x-2 text-slate-400 text-sm font-mono">
-                    <Terminal className="h-4 w-4" />
-                    <span>venpa-assistant@v1.0</span>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Live Engine</span>
-                </div>
-              </div>
-
-              {/* Chat Content */}
-              <div 
-                ref={scrollRef}
-                className="flex-1 overflow-y-auto p-6 space-y-6 scrollbar-hide"
-              >
-                {messages.map((msg, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div className={`max-w-[85%] rounded-2xl p-4 ${
-                      msg.role === 'user' 
-                        ? 'bg-blue-600 text-white rounded-tr-none' 
-                        : 'bg-slate-900 text-slate-200 border border-slate-800 rounded-tl-none'
-                    }`}>
-                      <div className="text-sm prose prose-invert max-w-none">
-                        <Markdown>{msg.content}</Markdown>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-                {isLoading && (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="flex justify-start"
-                  >
-                    <div className="bg-slate-900 text-slate-400 p-4 rounded-2xl rounded-tl-none border border-slate-800 flex items-center space-x-3">
-                      <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
-                      <span className="text-sm font-mono tracking-tighter italic">Synthesizing strategy...</span>
-                    </div>
-                  </motion.div>
-                )}
-              </div>
-
-              {/* Input Area */}
-              <div className="p-4 bg-slate-900/50 border-t border-slate-800">
-                <div className="relative flex items-center">
-                  <input
-                    type="text"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                    placeholder="Ask about AI Readiness or RAG architecture..."
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 pr-12 text-white text-sm outline-none focus:border-blue-500 transition-all placeholder:text-slate-600"
-                  />
-                  <button
-                    onClick={handleSendMessage}
-                    disabled={isLoading || !input.trim()}
-                    className="absolute right-2 p-2 text-blue-500 hover:text-blue-400 disabled:text-slate-700 disabled:cursor-not-allowed transition-colors"
-                  >
-                    <Send className="h-5 w-5" />
-                  </button>
-                </div>
-                <div className="mt-3 flex items-center justify-between px-1">
-                    <div className="text-[10px] text-slate-600 font-mono flex items-center space-x-2">
-                        <BarChart3 className="h-3 w-3" />
-                        <span>Latency: 240ms</span>
-                        <Globe className="h-3 w-3 ml-2" />
-                        <span>Region: Asia-1</span>
-                    </div>
-                    <div className="text-[10px] text-slate-600 font-mono">
-                        Press Enter to Send
-                    </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Neural Interface Section Below */}
+        {/* Vision Link Sandbox Section */}
         <motion.div
            initial={{ opacity: 0, y: 40 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
-           transition={{ duration: 0.8, delay: 0.2 }}
-           className="mt-20 pt-12 border-t border-slate-200 dark:border-slate-800"
+           transition={{ duration: 0.8 }}
+           className="pt-12"
         >
             <div className="mb-10 flex flex-col md:flex-row items-end md:items-center justify-between gap-6 px-4">
                 <div className="max-w-2xl">
