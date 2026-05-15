@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-slate-200 dark:border-slate-800'} focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all dark:text-white`}
-                      placeholder="john@company.com"
+                      placeholder="abc@company.com"
                     />
                     {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
                   </div>
@@ -214,7 +214,6 @@ const Contact: React.FC = () => {
                   >
                     <option disabled value="">Select an option</option>
                     <optgroup label="Direct Conversions">
-                      <option>Get Started</option>
                       <option>Enterprise AI Readiness Audit</option>
                     </optgroup>
                     <optgroup label="Products">
@@ -224,6 +223,8 @@ const Contact: React.FC = () => {
                       <option>Multi-Agent Orchestrators</option>
                     </optgroup>
                     <optgroup label="Services">
+                      <option>Automate your workflows</option>
+                      <option>Next-Gen Web Development / 3D Experiences</option>
                       <option>Legacy Architecture Modernization</option>
                       <option>Secure Enterprise AI (Private Cloud)</option>
                       <option>Data Engineering & Training</option>
