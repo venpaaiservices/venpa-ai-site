@@ -81,10 +81,20 @@ const AuditFormModal: React.FC<AuditFormModalProps> = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   const objectives = [
-    "Data-Driven Optimization & Personalization",
-    "Implementing Agentic AI & LLM Workflows",
-    "Advanced CRM & E-commerce Integrations",
-    "Next-Gen Web Development / 3D Experiences"
+    "Automate your workflows",
+    "Next-Gen Web Development / 3D Experiences",
+    "Architectural Modernization",
+    "Private LLM Deployment",
+    "ROI-Driven Data Engineering",
+    "Strategic AI Roadmap",
+    "Cloud Velocity Audit",
+    "Precision Data Synthesis",
+    "Enterprise RAG Pipelines",
+    "Agentic API Orchestration",
+    "Data-Driven Optimization Engine",
+    "Agentic Voice Triage",
+    "Enterprise AI Stack Audit",
+    "Multi-Agent Orchestrators"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
