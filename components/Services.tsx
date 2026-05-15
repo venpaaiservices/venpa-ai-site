@@ -8,7 +8,6 @@ import {
   Cpu,
   GraduationCap,
   Sparkles,
-
   Briefcase,
   Phone,
   Bot,
@@ -16,15 +15,6 @@ import {
   BarChart3,
   Package,
   Settings
-
-  CreditCard,
-  Search,
-  Package,
-  Settings,
-  Phone,
-  Bot,
-  Zap,
-  Globe
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Service } from '../types';
@@ -32,7 +22,6 @@ import AuditFormModal from './AuditFormModal';
 
 const products: Service[] = [
   {
-
     id: 'agentic-ai',
     title: 'Agentic AI Systems',
     description: 'Autonomous AI agents that execute workflows, reasoning, and multi-step automation without human intervention.',
@@ -51,58 +40,19 @@ const products: Service[] = [
     title: 'Voice AI Solutions',
     description: 'Human-like multilingual AI voice agents that handle qualification and routing at enterprise scale.',
     icon: Phone,
-    id: 'optimization-product',
-    title: 'Data-Driven Optimization Engine',
-    description: 'Bespoke optimization & personalization engines built on proprietary data to maximize B2B revenue and user LTV.',
-    icon: Sparkles,
-    gradient: 'from-blue-600 to-indigo-600'
-  },
-  {
-    id: 'voice-agent',
-    title: 'Agentic Voice Triage',
-    description: 'Autonomous voice agents that execute complex qualification frameworks and route high-value enterprise leads instantly.',
-    icon: Phone,
-    gradient: 'from-blue-400 to-cyan-600'
-  },
-  {
-    id: 'ai-gap-analysis',
-    title: 'Enterprise AI Stack Audit',
-    description: 'Deep technical audit identifying stack vulnerabilities and deployment bottlenecks for a secure modernization roadmap.',
-    icon: Search,
-    gradient: 'from-orange-500 to-red-600'
-  },
-  {
-    id: 'autonomous-agents',
-    title: 'Multi-Agent Orchestrators',
-    description: 'Sophisticated AI ecosystems autonomously handling complex workflows from supply chain to internal knowledge retrieval.',
-    icon: Bot,
-
     gradient: 'from-emerald-500 to-teal-600'
   }
 ];
 
 const services: Service[] = [
   {
-
     id: '3d-websites',
     title: 'Next-Gen Web / 3D Experiences',
     description: 'Immersive, high-performance 3D web experiences that redefine your digital presence and engage users.',
-    id: 'workflow-automation',
-    title: 'Automate your workflows',
-    description: 'Smarter Workflows & Better Outcomes through autonomous AI agent orchestration and intelligent process intelligence.',
-    icon: Zap,
-    gradient: 'from-blue-600 to-purple-600'
-  },
-  {
-    id: '3d-websites',
-    title: 'Next-Gen Web Development / 3D Experiences',
-    description: 'Immersive, high-performance 3D web experiences that captivate your audience and redefine your digital presence.',
-
     icon: Globe,
     gradient: 'from-blue-600 to-cyan-500'
   },
   {
-
     id: 'product-management',
     title: 'AI Product Management',
     description: 'Bridging the gap between technical AI potential and market-winning user experiences through strategic roadmap development.',
@@ -127,70 +77,15 @@ const services: Service[] = [
     id: 'modernization',
     title: 'Architectural Modernization',
     description: 'Migrating legacy codebases into scalable, AI-ready microservices using advanced automated refactoring.',
-
-    id: 'mobile-web',
-    title: 'Architectural Modernization',
-    description: 'Migrating legacy monolithic codebases into scalable, AI-ready microservices using advanced automated refactoring.',
-    icon: Smartphone,
-    gradient: 'from-blue-500 to-cyan-500'
-  },
-  {
-    id: 'llms',
-    title: 'Private LLM Deployment',
-    description: 'Isolated, proprietary LLM knowledge engines deployed directly into your VPC. Zero data leakage, 100% control.',
-    icon: Brain,
-    gradient: 'from-purple-500 to-pink-500'
-  },
-  {
-    id: 'data-eng',
-    title: 'ROI-Driven Data Engineering',
-    description: 'High-velocity ETL pipelines and real-time data synchronization across fragmented enterprise tech stacks.',
-    icon: Database,
-    gradient: 'from-orange-500 to-red-500'
-  },
-  {
-    id: 'product-mgmt',
-    title: 'Strategic AI Roadmap',
-    description: 'Agile product management focusing on high-impact AI integration and measurable business outcomes.',
-
     icon: Layers,
     gradient: 'from-indigo-500 to-blue-500'
   },
   {
-
     id: 'corporate-training',
     title: 'Corporate AI Training',
     description: 'Empowering your workforce with the tools and mindsets needed to handle, deploy, and scale AI systems effectively.',
     icon: GraduationCap,
     gradient: 'from-yellow-400 to-orange-600'
-
-    id: 'infra',
-    title: 'Cloud Velocity Audit',
-    description: 'Implementation of AI-driven auditing to predict failures and slash cloud waste by up to 40%.',
-    icon: Server,
-    gradient: 'from-slate-500 to-slate-700'
-  },
-  {
-    id: 'training',
-    title: 'Precision Data Synthesis',
-    description: 'Expert-led data labeling and synthetic data generation for high-accuracy machine learning models.',
-    icon: Cpu,
-    gradient: 'from-yellow-500 to-orange-500'
-  },
-  {
-    id: 'corporate-training',
-    title: 'Enterprise RAG Pipelines',
-    description: 'Retrieval-Augmented Generation at scale for secure, context-aware AI that understands your deep corporate data.',
-    icon: GraduationCap,
-    gradient: 'from-pink-500 to-rose-500'
-  },
-  {
-    id: 'payment-gateway',
-    title: 'Agentic API Orchestration',
-    description: 'Intelligent AI-driven connectivity for complex B2B ecosystems and cross-platform interoperability.',
-    icon: CreditCard,
-    gradient: 'from-slate-700 to-slate-900'
-
   }
 ];
 
@@ -350,8 +245,4 @@ const Services: React.FC = () => {
   );
 };
 
-
 export default Services;
-
-export default Services;
-
